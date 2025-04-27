@@ -32,7 +32,7 @@ This project analyzes vehicle engine operating conditions using real-time OBD-II
 
 ## Functionality and Design
 
-### Architecture, Algorithms, and Techniques
+### Architecture
 - **Data Cleaning**: Python (Pandas) was used to clean and process the OBD-II CSV sensor dataset. 
 - **Risk Detection**: Python (Pandas) was used to detect high-RPM events where the engine exceeded 3000 rpm and high-load events where the engine load exceeded 80 percent.
 - **Visualization**:
