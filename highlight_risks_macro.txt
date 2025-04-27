@@ -1,0 +1,18 @@
+Sub HighlightRiskyRows_CleanedData()
+    Dim ws As Worksheet
+    Dim lastRow As Long
+    Dim i As Long
+
+    Set ws = ThisWorkbook.Sheets(1)
+
+    lastRow = ws.Cells(ws.Rows.Count, "A").End(xlUp).Row
+
+    ' Loop through each row
+    For i = 2 To lastRow
+        If ws.Cells(i, 1).Value > 3000 Or ws.Cells(i, 3).Value > 80 Then
+            ws.Rows(i).Interior.Color = RGB(255, 153, 153) ' Light red highlight for risky rows
+        End If
+    Next i
+
+    MsgBox "Highlighting risky rows completed!"
+End Sub
